@@ -1,0 +1,89 @@
+<!-- Liste des objets graphiques -->
+<!ELEMENT Scene (ObjetGraphique*,Source*,Couleur)>
+
+<!-- Une source de lumière est caractérisée par sa position et sa couleur -->
+<!ELEMENT Source (Point,Couleur)>
+
+<!-- Un objet graphique peut être une sphère, un plan, un cube -->
+<!-- ou un objet à facettes (attention, un cube est un objet à -->
+<!-- facette prédéfini) -->
+<!-- Un objet graphique est caractérisé par la matière qui le -->
+<!-- compose -->
+<!ELEMENT ObjetGraphique (Matiere,(Sphere|Plan|Cube|ObjetFacette))>
+
+<!-- Une sphère est caractérisée par son centre et un attribut son rayon -->
+<!ELEMENT Sphere (Point)>
+
+<!-- Rayon d'une sphère -->
+<!-- Cette valeur entière est comprise entre 1 et 32768 -->
+<!ATTLIST Sphere rayon CDATA #REQUIRED>
+
+<!-- Un plan est caractérisé par 3 points qui ne sont pas sur la même droite -->
+<!ELEMENT Plan (Point,Point,Point)>
+
+<!-- Un cube est caractérisé par quatre points A, B, C, D tels que : -->
+<!--   AB, AC et AD sont de même longueur -->
+<!--   AB, AC et AD forment un repère orienté en sens direct -->
+<!ELEMENT Cube (Point,Point,Point,Point)>
+
+<!-- Un objet à facette est composée d'un ensemble de facettes -->
+<!ELEMENT ObjetFacette (Facette*)>
+
+<!-- Un facette est composée de 3 points -->
+<!ELEMENT Facette (Point,Point,Point)>
+
+<!-- La matière d'un objet est caractérisée par les coefficients -->
+<!-- de transmission des lumières qui éclairent un point -->
+<!-- Ces coefficients sont définis pour chaque composante d'une couleur -->
+<!-- Nous utilisons donc une couleur pour les représenter -->
+<!-- Il s'agit donc d'une valeur entière entre 0 et 255 qu'il faut diviser -->
+<!-- par 255 pour obtenir une valeur réelle entre 0 et 1 -->
+<!-- L'indice de réfraction de la matière est spécifié comme un attribut -->
+<!ELEMENT Matiere (Ambiante,Diffuse,Speculaire,Reflection,Refraction)>
+
+<!-- Cette valeur entière est comprise entre 0 et 1024 -->
+<!-- Elle doit être divisée par 64 pour obtenir une valeur réelle -->
+<!-- Par défaut la valeur est 64 donc 1, l'indice du vide -->
+<!ATTLIST Matiere n CDATA #IMPLIED>
+
+<!-- Coefficients de transmission de la lumière ambiante Ka -->
+<!ELEMENT Ambiante (Couleur)>
+
+<!-- Coefficients de transmission de la lumière diffuse Kd -->
+<!ELEMENT Diffuse (Couleur)>
+
+<!-- Coefficients de transmission de la lumière spéculaire W -->
+<!-- W est une constante ici et pas une fonction comme évoqué dans le sujet -->
+<!-- Un attribut donne la valeur de n -->
+<!ELEMENT Speculaire (Couleur)>
+
+<!-- Cette valeur entière est comprise entre 0 et 1024 -->
+<!-- Elle doit être divisée par 64 pour obtenir une valeur réelle -->
+<!ATTLIST Speculaire n CDATA #REQUIRED>
+
+<!-- Coefficients de transmission de la lumière réfléchie Kr -->
+<!ELEMENT Reflection (Couleur)>
+
+<!-- Coefficients de transmission de la lumière réfractée Kt -->
+<!ELEMENT Refraction (Couleur)>
+
+<!-- Les caractéristiques des couleurs sont des attributs -->
+<!ELEMENT Couleur (EMPTY)>
+
+<!-- Composante Rouge, Vert et Bleu d'une couleur -->
+<!-- Chaque composante est une valeur entre entière entre 0 et 255 -->
+<!ATTLIST Couleur
+	  r CDATA #REQUIRED
+	  v CDATA #REQUIRED
+	  b CDATA #REQUIRED
+>
+<!-- Les caractéristiques des points sont des attributs -->
+<!ELEMENT Point (EMPTY)>
+
+<!-- Composante x, y et z d'un point -->
+<!-- Chaque composante est une valeur entière entre -31768 et + 32767 -->
+<!ATTLIST Point
+	  x CDATA #REQUIRED
+	  y CDATA #REQUIRED
+	  z CDATA #REQUIRED
+>

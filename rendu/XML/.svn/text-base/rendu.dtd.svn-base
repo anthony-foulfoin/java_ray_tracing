@@ -1,0 +1,32 @@
+<!-- Définition de la liste des vues -->
+<!ELEMENT Rendu (Vue*)>
+
+<!-- Une vue est caractérisée par le point de vue et les coordonnées -->
+<!-- des quatre coins définissant l'écran -->
+<!-- bas,gauche puis bas,droite puis haut,droite puis haut,gauche -->
+<!-- 3 ou 4 points ne doivent pas se trouver sur la même droite -->
+<!-- les coordonnées des points doivent respecter leurs positions relatives -->
+<!ELEMENT Vue (PointVue,Point,Point,Point,Point)>
+
+<!-- Un point de vue est un point-->
+<!ELEMENT PointVue (Point)>
+
+<!-- Les caractéristiques des points sont des attributs -->
+<!ELEMENT Point (EMPTY)>
+
+<!-- Composante x, y et z d'un point -->
+<!-- Chaque composante est une valeur entière entre -31768 et + 32767 -->
+<!ATTLIST Point
+	  x CDATA #REQUIRED
+	  y CDATA #REQUIRED
+	  z CDATA #REQUIRED
+>
+
+<!-- Largeur et hauteur d'un écran en nombre de pixels -->
+<!-- Ces valeurs entières sont comprises entre 1 et 1024 -->
+<!ATTLIST Vue
+	  largeur CDATA #REQUIRED
+	  hauteur CDATA #REQUIRED>
+
+
+

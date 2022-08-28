@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene>
+
+<ObjetGraphique>
+		<Matiere n="64">
+			<Ambiante>
+				<Couleur r="39" v="167" b="255" />
+			</Ambiante>
+			<Diffuse>
+				<Couleur r="234" v="122" b="122" />
+			</Diffuse>
+			<Speculaire n="512">
+				<Couleur r="234" v="122" b="122" />
+			</Speculaire>
+			<Reflection>
+				<Couleur r="123" v="123" b="255" />
+			</Reflection>
+			<Refraction>
+				<Couleur r="127" v="127" b="127" />
+			</Refraction>
+		</Matiere>
+		<ObjetFacette>
+			<Facette>
+				<Point x="10" y="0" z="-60" />
+				<Point x="10" y="0" z="-120" />
+				<Point x="10" y="60" z="-120" />
+			</Facette>
+		</ObjetFacette>
+	</ObjetGraphique>
+
+
+	<ObjetGraphique>
+		<Matiere n="64">
+			<Ambiante>
+				<Couleur r="39" v="167" b="255" />
+			</Ambiante>
+			<Diffuse>
+				<Couleur r="234" v="122" b="122" />
+			</Diffuse>
+			<Speculaire n="512">
+				<Couleur r="234" v="122" b="122" />
+			</Speculaire>
+			<Reflection>
+				<Couleur r="123" v="123" b="255" />
+			</Reflection>
+			<Refraction>
+				<Couleur r="127" v="127" b="127" />
+			</Refraction>
+		</Matiere>
+		<Cube>
+			<Point x="30" y="30" z="0" />
+			<Point x="30" y="30" z="90" />
+			<Point x="120" y="30" z="0" />
+			<Point x="30" y="-60" z="0" />
+		</Cube>
+	</ObjetGraphique>
+
+<ObjetGraphique>
+		<Matiere n="64">
+			<Ambiante>
+				<Couleur r="123" v="132" b="255" />
+			</Ambiante>
+			<Diffuse>
+				<Couleur r="234" v="122" b="122" />
+			</Diffuse>
+			<Speculaire n="512">
+				<Couleur r="234" v="122" b="122" />
+			</Speculaire>
+			<Reflection>
+				<Couleur r="120" v="124" b="134" />
+			</Reflection>
+			<Refraction>
+				<Couleur r="234" v="122" b="122" />
+			</Refraction>
+		</Matiere>
+		<Plan>
+			<Point x="0" y="-100" z="0" />
+			<Point x="0" y="-100" z="1" />
+			<Point x="1" y="-100" z="0" />
+		</Plan>
+	</ObjetGraphique>
+
+
+<!-- grosse sphere -->
+	<ObjetGraphique>
+		<Matiere n="64">
+			<Ambiante>
+				<Couleur r="234" v="32" b="56" />
+			</Ambiante>
+			<Diffuse>
+				<Couleur r="234" v="122" b="122" />
+			</Diffuse>
+			<Speculaire n="512">
+				<Couleur r="234" v="122" b="122" />
+			</Speculaire>
+			<Reflection>
+				<Couleur r="123" v="123" b="255" />
+			</Reflection>
+			<Refraction>
+				<Couleur r="234" v="122" b="122" />
+			</Refraction>
+		</Matiere>
+		<Sphere rayon="100">
+			<Point x="120" y="0" z="0" />
+		</Sphere>
+	</ObjetGraphique>
+
+
+<ObjetGraphique>
+		<Matiere n="64">
+			<Ambiante>
+				<Couleur r="234" v="32" b="56" />
+			</Ambiante>
+			<Diffuse>
+				<Couleur r="234" v="122" b="122" />
+			</Diffuse>
+			<Speculaire n="512">
+				<Couleur r="234" v="122" b="122" />
+			</Speculaire>
+			<Reflection>
+				<Couleur r="123" v="123" b="255" />
+			</Reflection>
+			<Refraction>
+				<Couleur r="234" v="122" b="122" />
+			</Refraction>
+		</Matiere>
+		<Sphere rayon="50">
+			<Point x="200" y="100" z="100" />
+		</Sphere>
+	</ObjetGraphique>
+
+<ObjetGraphique>
+		<Matiere n="64">
+			<Ambiante>
+				<Couleur r="234" v="32" b="56" />
+			</Ambiante>
+			<Diffuse>
+				<Couleur r="234" v="122" b="122" />
+			</Diffuse>
+			<Speculaire n="512">
+				<Couleur r="234" v="122" b="122" />
+			</Speculaire>
+			<Reflection>
+				<Couleur r="123" v="123" b="255" />
+			</Reflection>
+			<Refraction>
+				<Couleur r="234" v="122" b="122" />
+			</Refraction>
+		</Matiere>
+		<Sphere rayon="50">
+			<Point x="200" y="100" z="-100" />
+		</Sphere>
+	</ObjetGraphique>
+
+
+	<!--  -->
+	<ObjetGraphique>
+		<Matiere n="64">
+			<Ambiante>
+				<Couleur r="39" v="167" b="255" />
+			</Ambiante>
+			<Diffuse>
+				<Couleur r="234" v="122" b="122" />
+			</Diffuse>
+			<Speculaire n="512">
+				<Couleur r="234" v="122" b="122" />
+			</Speculaire>
+			<Reflection>
+				<Couleur r="123" v="123" b="255" />
+			</Reflection>
+			<Refraction>
+				<Couleur r="127" v="127" b="127" />
+			</Refraction>
+		</Matiere>
+		<Sphere rayon="50">
+			<Point x="300" y="0" z="0" />
+		</Sphere>
+	</ObjetGraphique>
+
+	<Source>
+		<Point x="-100" y="160" z="40" />
+		<Couleur r="255" v="255" b="255" />
+	</Source>
+	<Couleur r="128" v="128" b="128" />
+</Scene>
+			
+				
+				
+			
